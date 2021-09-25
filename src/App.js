@@ -8,7 +8,9 @@ function App() {
   const [word, setWord] = useState(sample(words))
 
   function Refresh() {
-    return <img src={refresh} alt="refresh" className="icon" onClick={() => setWord(sample(words))} />
+    return <div className="round">
+      <img src={refresh} alt="refresh" className="icon" onClick={() => setWord(sample(words))} />
+    </div>
   }
 
   function Main({ word: { category, value } }) {
